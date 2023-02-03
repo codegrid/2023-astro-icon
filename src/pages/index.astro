@@ -1,15 +1,32 @@
 ---
+import ArticleCard from "../components/article-card.astro";
+import BaseHtml from "../layout/base-html.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
-    <h1>Astro</h1>
-  </body>
-</html>
+<BaseHtml title="astro-iconを使った記事カード">
+  <div class="CardLayout">
+    <ArticleCard />
+    <ArticleCard />
+    <ArticleCard />
+    <ArticleCard />
+    <ArticleCard />
+  </div>
+</BaseHtml>
+
+<style>
+  body {
+    padding: 0;
+  }
+
+  .CardLayout {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 2em;
+  }
+
+  /** カードが1つだけの場合、画面幅いっぱいに広がらないようにする */
+  .CardLayout :global(> *:only-child) {
+    max-width: 300px;
+  }
+</style>

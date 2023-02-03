@@ -1,0 +1,65 @@
+---
+---
+
+<section class="Card">
+  <div class="CardHeader">
+    <h2 class="CardHeader__title">タイトル</h2>
+    <button
+      class="CardHeader__favoriteButton"
+      type="button"
+      aria-label="いいね"
+    >
+      <!-- DO: ここに星アイコン -->
+    </button>
+  </div>
+  <p class="CardBody">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi aspernatur
+    aliquam repellendus similique recusandae ut non tenetur consequatur labore
+    excepturi provident itaque facere neque delectus, eos nobis aperiam amet
+    voluptatem.
+  </p>
+  <div class="CardFooter">
+    <!-- DO: ここに時計アイコン -->
+    <time datetime="2023-01-30">2023年1月30日</time>
+  </div>
+</section>
+
+<style>
+  .Card {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .CardHeader {
+    /** DO: ここに星アイコン配置用スタイル */
+  }
+
+  .CardHeader__favoriteButton {
+    /** DO: ここに星アイコン配置用スタイル */
+    appearance: none;
+    background: inherit;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .CardHeader__title {
+    margin: 0;
+    text-align: center;
+  }
+
+  .CardBody {
+    margin: 0;
+  }
+
+  .CardFooter {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.25em;
+  }
+
+  /** DO: ここにアイコン用スタイル */
+</style>
